@@ -4,5 +4,5 @@ source "https://rubygems.org"
 gemspec
 
 gem 'rest-client'
-gem 'byebug'
+gem 'pry'
 gem 'json'
