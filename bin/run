@@ -1,1 +1,6 @@
 #!/usr/bin/ruby ruby 
+
+
+require_relative '../lib/got.rb'
+
+#cli.new.run
