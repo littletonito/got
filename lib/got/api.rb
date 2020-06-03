@@ -9,8 +9,9 @@ class Api
     res = RestClient.get(BASE_URL)
     data = JSON.parse(res.body)
     data['results'].each do |got|
-      puts got["name"]
-      puts got["url"]
+      name = got["name"]
+      id = got["url"].split("/")[-1]
+      Got.new(name, id)
     end
   end
 end
