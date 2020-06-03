@@ -42,8 +42,13 @@ class Cli
     id
   end
   
+  
   def print_error
     puts "Invalid selection, try again!"
+  end
+  
+  def get_got_details(id)
+    Api.get_details_by_id(id)
   end
 
 end
