@@ -4,7 +4,7 @@ require 'pry'
 class Cli 
 
   def run 
-    welcome
+    print_welcome
     Api.get_got
     main
   end
@@ -16,7 +16,7 @@ class Cli
   def main
     print_all
     print_selection_prompt
-    id = prompt_selection
+    id = valid_id?(prompt_selection)
   end
   
   def print_all
@@ -36,6 +36,7 @@ class Cli
     id = id.to_i
     if id < 1 || id > Got.all.size 
       print_error
+      sleep 1.5
       main
     end
     id
