@@ -16,7 +16,7 @@ class Api
   end
   
   def self.get_details_by_id(id)
-    Got.find_by_id(id)
+    selected_got = Got.find_by_id(id)
     res = RestClient.get("#{BASE_URL}#{id}")
     data = JSON.parse(res.body)
   end
