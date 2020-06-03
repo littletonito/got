@@ -13,6 +13,11 @@ class Got
   def self.all
     @@all
   end
+  
+  def self.find_by_id(id)
+    index = id.to_i -1 
+    all[index]
+  end
 
 
 end
