@@ -7,11 +7,10 @@ class Api
 
   def self.get_got
     res = RestClient.get(BASE_URL)
-    binding.pry 
+    data = JSON.parse(res.body)
+    data['results'].each do |got|
+      puts got["name"]
+      puts got["url"]
+    end
   end
-
-
-
-
-
 end
