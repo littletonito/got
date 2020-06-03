@@ -5,5 +5,5 @@
 
 require_relative '../lib/got.rb'
 
-#cli.new.run
+Cli.new.run
 
